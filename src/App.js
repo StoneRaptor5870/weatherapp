@@ -43,13 +43,13 @@ function App() {
 
   return (
     <div
-      className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}
+      className={`mx-auto max-w-full md:max-w-screen-md mt-4 py-5 px-4 md:px-8 bg-gradient-to-br h-full shadow-xl shadow-gray-400 ${formatBackground()}`}
     >
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
       {weather && (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <TimeAndLocation weather={weather} />
           <TemperatureAndDetails weather={weather} />
 
